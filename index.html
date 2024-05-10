@@ -33,11 +33,11 @@
     <link rel="stylesheet" href="./styles/index.css">
 
     <!--linkk de mi favicon - logo en la pestaña del navegador-->
-    <link rel="shorcut icon" href="./assets/logo.jpg" >
-    
+    <link rel="shorcut icon" href="./assets/logo.jpg">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
-    
+
+
     <title> Proyecto 1</title>
 
 
@@ -47,20 +47,25 @@
     <!--BODY -> Donde van nuestras etiquetas donde estructuramos nuestro proyecto lo que vemos de nuestro sitio web-->
 
     <header>
-        <nav>
+        <nav class="menuNav">
 
-            <ul>
+            <ul class="listaMenu">
 
                 <li>Seccion 1</li>
-                <li><a href="./index.html"> seccion 2</a>
-                </li>
+                <li><a href="./index.html"> seccion 2</a> </li>
+
+                <img class="logo" src="./assets/logo.jpg" alt="logo">
+
+
                 <li><a href="https://www.tiendasjumbo.co"> seccion 3 </a></li>
+                <li><a href="https://www.falabella.com"> seccion 4 </a></li>
+
 
             </ul>
         </nav>
-        <section>
+        <section class="banner">
             <img src="./assets/banner.jpg" alt="banner-libros">
-
+</section>
     </header>
     <main>
         <!--seleccion informativa1
@@ -70,6 +75,7 @@
         p- parrafos    
         
         -->
+        <section  class ="seccion1">
         <h1>TITULO PRINCIPAL</h1>
 
         <!--ETIQUETAS SEMANTICAS, structura del codigo header main footer lista menu  SEO
@@ -80,7 +86,7 @@
             todo lo no semantico nos lleva a estilo (css)
         -->
 
-        <div>
+        <div class="seccionInformativa" id="div-video">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/Z5ovFSHqofE?si=RE_0dyNgXrYO5qC0"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -89,37 +95,36 @@
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error voluptas illum beatae voluptatibus illo
             delectus omnis, ut voluptate consectetur. Magni officia sapiente quas maiores animi ab eveniet rerum.
             Perferendis, perspiciatis.</p>
-<H2>TITULO2</H2>
-<img src="./assets/img.jpg" alt="imagen de libros">
-<img src="./assets/img.jpg" alt="imagen de libros">
-<img src="./assets/img.jpg" alt="imagen de libros">
-<img src="./assets/img.jpg" alt="imagen de libros">
-<footer>
-    <!--division de contenido contactens-->
-    <div>
-        <ol>
-            <li>Telefono: 555 555 555</li> 
-            <li>CORREO: NATA@GMAIL</li>
-            <li>@NATA: 555 555 555</li>
-        </ol>
-    </div>
-    <!--division de contenido logo-->>
-        
-    <div>
-        <img src="./assets/logo.jpg" alt="logo">
-    </div>
-    <!--division redes sociales-->
-    <div>
-        <h3>Redes sociales</h3>
-        <div>
-            <a href="https://www.facebook.com/?locale=es_LA"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.whatsapp.com/?lang=es_LA"><i class="bi bi-whatsapp"></i></a>
-           
+            <section  class ="seccion2">
+        <H2>TITULO2</H2>
+        <img src="./assets/img.jpg" alt="imagen de libros">
+        <img src="./assets/img.jpg" alt="imagen de libros">
+        <img src="./assets/img.jpg" alt="imagen de libros">
+        <img src="./assets/img.jpg" alt="imagen de libros">
+        <footer>
+            <!--division de contenido contactens-->
+            <div>
+                <ol>
+                    <li>Telefono: 555 555 555</li>
+                    <li>CORREO: NATA@GMAIL</li>
+                    <li>@NATA: 555 555 555 </li>
+                </ol>
+            </div>
+            <!--division de contenido logo-->>
 
-        </div>
-    </div>
-</footer>
+
+            <!--division redes sociales-->
+            <div>
+                <h3>Redes sociales</h3>
+                <div>
+                    <a href="https://www.facebook.com/?locale=es_LA"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.whatsapp.com/?lang=es_LA"><i class="bi bi-whatsapp"></i></a>
+
+
+                </div>
+            </div>
+        </footer>
 
         </section>
     </main>
