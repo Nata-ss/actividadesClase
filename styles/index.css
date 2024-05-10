@@ -40,7 +40,7 @@ pseudoelemento ::after
 }
 
 body {
-    
+
     width: 100%;
     background-color: var(--colorFondo);
     font-family: var(--tipografia);
@@ -51,7 +51,7 @@ body {
 
 /*header*/
 header {
-    
+
     width: 100vw;
     height: 100vh;
 }
@@ -65,7 +65,7 @@ header {
 }
 
 .listaMenu {
-    height: 100px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,12 +74,16 @@ header {
 }
 
 .listaMenu a {
-    height: 100%;
     text-decoration: none;
     color: var(--colorTexto);
     font-size: 18px;
+    display: flex;
     font-weight: bold;
 
+}
+
+.listaMenu a:hover {
+    color: white
 }
 
 .logo {
@@ -87,44 +91,73 @@ header {
     height: 100px;
 }
 
-/*main*/
 
 .banner {
-    
+
     height: 70%;
     width: 100%;
 
 }
-.banner img{
+
+.banner img {
     width: 100%;
     height: 100%;
 }
+
 /*main*/
-main{
-    border: 5px solid rebeccapurple;
+main {
+
     width: 100%;
     height: auto;
     display: flex;
-    justify-content:center; 
+    justify-content: center;
     flex-direction: column;
     align-content: center;
-margin: 50px 0px;
+    margin: 50px 0px;
 }
-.seccion1{
+
+.seccion1 {
     text-align: center;
     text-transform: uppercase;
 
 }
-#div-video{
+
+#div-video {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
-#div-video iframe{
+
+#div-video iframe {
+    width: 50%;
+}
+
+#div-video p {
+    width: 50%;
+}
+.seccion2 {
+    border: 3px;
+}
+
+.contenedor-img {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr  1fr;
+    gap: 10px;
+}
+
+.contenedor-img img{
+    width: 100%;
+    height: 100%;
 
 }
-.seccion2{
-    border: 3px ;
+.titulo{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 20px opx;
+
 }
+
+
 /*footer*/
-
