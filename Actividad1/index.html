@@ -1,0 +1,150 @@
+<!--
+    html-> lenguaje marcado de hipertexto
+    marcado-> ETIQUETAS (apertuta y cierre)
+    hipertexto -> redireccion a otras paginas de html
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    lang -> lenguaje en el que esta hecho nuestra pagina web
+
+        HEAD-> CEREBRO DE MI PAGINA->
+        Todo lo que necesitamos para que funcione nuestro sitio web pero NO SE VE
+        - links
+        metadatos enfocados en el posicionamiento seo
+-->
+
+<head>
+    <!-- 
+        permite que el navegador interprete caracteres especiales
+    -->
+    <meta charset="UTF-8">
+    <!--
+        permite que se pueda adaptar a diferentes pantallas
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--titulos y descripcioes meta -enfocado a  posicionamiento SEO   -->
+    <meta name="author" content="Nataly Salamanca">
+    <meta name="keywords" content="Libros, Libreria, Cuentos">
+    <meta name="description" content="pagina informativa sobre libros">
+    <!--link a mis estilos-->
+    <!--href -> donde especifico la ruta de mis estilos-->
+    <link rel="stylesheet" href="./styles/index.css">
+
+    <!--linkk de mi favicon - logo en la pestaña del navegador-->
+    <link rel="shorcut icon" href="./assets/logo.jpg">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <title> Proyecto 1</title>
+
+
+</head>
+
+<body>
+    <!--BODY -> Donde van nuestras etiquetas donde estructuramos nuestro proyecto lo que vemos de nuestro sitio web-->
+
+    <header>
+        <nav class="menuNav">
+
+            <ul class="listaMenu">
+
+                <li> <a href="https://www.falabella.com">Seccion 1</a></li>
+                <li> <a href="#">seccion 2</a></li>
+                <li> <a href="./index.html">
+                        <img class="logo" src="./assets/logo.jpg" alt="logo">
+                    </a>
+                </li>
+                <li> <a href="#">seccion 3</a></li>
+                <li><a href="https://www.tiendasjumbo.co"> seccion 4 </a></li>
+            </ul>
+        </nav>
+
+        <section class="banner">
+            <img class="img-banner" src="./assets/banner.jpg" alt="banner-libros">
+        </section>
+    </header>
+
+    <main>
+        <!--seleccion informativa1
+        h1 el titulo principa
+        h2 titulos de nuestras selecciones de contenido  si se pueden repetir
+        h3- h6 subtitulos
+        p- parrafos    
+        
+        -->
+        <section class="seccion1">
+            <h1 class="titulo">BIBLIOTECA</h1>
+
+            <!--ETIQUETAS SEMANTICAS, structura del codigo header main footer lista menu  SEO
+            etiquetas iframe nos permiten consumir videos mapas de otros sitios web
+        no semantico puede contener cualquier cosa
+        <div> contenedor de elementos
+        <span> hacer modificaciones especificas
+            todo lo no semantico nos lleva a estilo (css)
+        -->
+
+            <div id="div-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Z5ovFSHqofE?si=RE_0dyNgXrYO5qC0"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error voluptas illum beatae voluptatibus
+                    illo
+                    delectus omnis, ut voluptate consectetur. Magni officia sapiente quas maiores animi ab eveniet
+                    rerum.
+                    Perferendis, perspiciatis.</p>
+        </section>
+
+        <section class="seccion2">
+            <H2 class="titulo">CATEGORIAS
+            <div class="contenedor-img">
+                <img src="./assets/img.jpg" alt="imagen de libros">
+                <img src="./assets/img.jpg" alt="imagen de libros">
+                <img src="./assets/img.jpg" alt="imagen de libros">
+                <img src="./assets/img.jpg" alt="imagen de libros">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!--division de contenido contactens-->
+        <div>
+            <h3>Contactame</h3>
+            <div class="Contactame"></div>
+            <ol>
+                <li>Telefono: 555 555 555</li>
+                <li>CORREO: NATA@GMAIL.COM</li>
+                <li>@NATA: 555 555 555 </li>
+            </ol>
+        </div>
+        <!--division de contenido logo-->
+        <section class="logo">
+            <img src="./assets/logo.jpg" alt="logo">
+        </section>
+        <div>
+           
+        </div>
+
+        <!--division redes sociales-->
+        <article>
+            <h3> Redes sociales</h3>
+        
+        <div class="redesSociales">
+            
+                <a href="https://www.facebook.com/?locale=es_LA"><i class="bi bi-facebook clase2"></i></a>
+                <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.whatsapp.com/?lang=es_LA"><i class="bi bi-whatsapp"></i></a>
+
+
+        </div>
+    </article>
+    </footer>
+
+   
+</body>
+
+</html>
