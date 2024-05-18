@@ -1,0 +1,257 @@
+/* Importaciones - fuentes */
+@import url('https://fonts.cdnfonts.com/css/quileute');
+@import url('https://fonts.cdnfonts.com/css/kelmscott-roman-nf');
+
+/* Establecer las variables en nuestro css
+    -paleta de colores
+    -tipografías
+    -medidas (opcional)
+*/
+
+
+/* root -> hace referencia a mi archivo raíz (<!DOCTYPE html>)*/
+:root {
+    /* paleta de colores */
+    --colorFondo: 	#00989b;
+    --colorEnfasis1: #dcdedd;
+    --colorEnfasis2: #99a2a1;
+    --colorEnfasis3: #00585a;
+    --colorText: #afafb8;
+    --colorText2: #00181a;
+
+    /* Fuentes */
+    --textTitle: 'Quileute', sans-serif;
+    --textContent: 'Kelmscott Roman NF', sans-serif;
+}
+
+/* condiciones o estilos iniciales de mi página */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:content-box
+}
+
+body{
+    background-color: var(--colorFondo);
+    width: 100vw;
+    height: auto;
+    /* Overflow -> me sirve para definir qué pasa con el contenido que sobresale de mi contenedor */
+    overflow-x:hidden;
+   
+
+}
+
+
+/* ----------------HEADER--------------- */
+header{
+    width: 80%;
+    height: 80px;
+}
+
+.menuNavegacion{
+/* importantísimo las dimensiones */
+    width: 100%;
+    height: 100px;
+    background-color: var(--colorEnfasis3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    /* poner esto por encima de todo */
+    z-index: 100;
+}
+
+.logo{
+    height: 70%;
+}
+.logo a{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    text-decoration: none;
+    font-family: var(--textContent);
+    color: var(--colorText);
+    /* grosor de la fuente */
+    font-weight: bold;
+    /* cambiar tamaño a la letra */
+    font-size: 15px;
+}
+.p-logo{
+    width: 80px;
+    /* alineación del texto */
+    text-align: left;
+    font-size: 15px;
+}
+.span-logo{
+    color: var(--colorEnfasis);
+}
+.img-logo{
+    height: 150%;
+    
+}
+
+.listaMenu{
+    display: flex;
+    gap: 70px;
+    list-style: none;
+}
+
+.listaMenu a{
+    text-decoration: none;
+    color: var(--colorText);
+    font-family: var(--textContent);
+    font-size: 20px;
+}
+
+.listaMenu a:hover{
+    color: var(--colorEnfasis1);
+}
+.baner{
+    width: 100%;
+    height: 80%;
+    
+}
+/* mi imagen ocupa todo el espacio de su padre */
+.baner img{
+    width: 100%;
+    height: 100%;
+    /* manipular la img */
+    object-fit: fill;
+    margin-top: 20px;
+    
+}
+/* ----------------MAIN--------------- */
+main{
+    width: 80%;
+    padding: 80px;
+    justify-content: center;
+}
+
+.contenedorPrincipal{
+    font-family: var(--textContent);
+}
+
+.contenedorPrincipal h1{
+    /* font-family: var(--textTitle); */
+    font-size: 40px;
+    color: var(--colorEnfasis3);
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contenedorImagenes{
+    
+    border: 3px solid var(--colorEnfasis3);
+    margin-top: 20px;
+    border-radius: 50px;
+    /* define qué pasa con el contenido que sobre sale */
+    display: grid;
+    grid-template-columns: (1fr 1fr 1fr 1fr 1fr 1fr);
+    grid-template-rows: (1fr 1fr 1fr 1fr 1fr 1fr) ;
+    
+}
+
+.contenedorImagenes img{
+    width:100%;
+    height: 100%;
+}
+
+.imagenes{
+    display: flex;
+    position:relative;
+    
+}
+
+.img1{
+    grid-column: 1/4;
+    grid-row: 1/ 2;
+    
+}
+
+.img2{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    
+}
+
+.img3{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    
+}
+.img4{
+    grid-column:3/4;
+    grid-row: 2/3;
+    
+}
+
+.img5{
+    grid-column:1/4;
+    grid-row: 3/4;
+    
+}
+.img6{
+    grid-column:1/2;
+    grid-row: 4/5;
+    
+}
+.img7{
+    grid-column:2/3;
+    grid-row: 4/5;
+  
+}
+.img8{
+    grid-column:3/4;
+    grid-row: 4/5;
+    border: solid red;
+   
+}
+.img9{
+    grid-column: 1/4;
+    grid-row: 5/6;
+    border: solid red;
+   
+}
+
+.parrafo-img{
+    background-color: var(--colorEnfasis2);
+    position: absolute;
+    /* por defecto se organiza arriba 0, izquierda 0 */
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    color: var(--colorEnfasis3);
+    /* opacidad de un elemento */
+    opacity: 0; 
+    /* 0% -> 100% */
+}
+
+.parrafo-img:hover{
+    opacity: 0.6;
+    /* cuando el cursor se ponga en la imágen, me salga como una manito */
+    cursor: pointer;
+}
+/* ----------------FOOTER--------------- */
+
+footer{
+    height: 100px;
+    background-color: var(--colorEnfasis3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-family: var(--textContent);
+    color: var(--colorText);
+}
