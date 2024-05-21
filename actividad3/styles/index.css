@@ -59,18 +59,28 @@ body{
     height: 500px;
     display: flex;
     /*nombre que se conecta con el keyframe*/
-    animation-name: slide;
+    animation-name: rotar;
     /*tiempo de duracion*/
     animation-duration: 20s;
      /*cuanta veces quiero que se repita*/
      animation-iteration-count: infinite;
      /*forma que se ve el cambio*/
-     -o-animation-timing-function: ease-in-out;
+     animation-timing-function: linear ;
+     animation-direction: alternate;
 }
    /*vamos a poner a funcionar la animacion*/
    /*inicio 0% mitad 50% final 100%
    from -> to */
-   @keyframes identifier {
+   @keyframes rotar {
+    from{
+        transform: translateX(0%);
+    }
+    50%{
+            transform: translateX(-150%);
+    }
+    to{
+        transform: translateX(-300%);
+    }
     
    }
 .contenedor-slider img{
