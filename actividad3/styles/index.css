@@ -1,0 +1,96 @@
+
+@import url('https://fonts.cdnfonts.com/css/ysabeau-sc');
+@import url('https://fonts.cdnfonts.com/css/quito');
+
+:root{
+/* paleta de colores*/
+
+    --colorFondo: #7469B6;
+    --colorClaro: #E1AFD1;
+    --colorEnfasis: #AD88C6;
+    --colorLetra: #493754;
+
+    /*tipografia*/
+    --textTitle: 'Ysabeau SC', sans-serif;
+    --textContent: 'Quito', sans-serif;
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:var(--colorClaro);
+    font-family: var(--textTitle);
+    overflow:-x hidden;
+
+}
+   /*HEADER*/
+
+   header {
+   border: 15px red;
+   width: 100vw;
+    height: auto;
+   
+
+}
+
+.titulo{
+    height: 150px;
+    width: 100%;
+    background-color: var(--colorEnfasis);
+    display: grid;
+    place-content: center;
+    color: var(--colorFondo);
+}
+.contenedor-slider{
+    border:solid 5px rgb(61, 50, 50);
+    width: 1000px;
+    height: 500px;
+    margin:100px auto;
+    overflow-x: scroll ;
+    
+}
+
+.slider{
+
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    /*nombre que se conecta con el keyframe*/
+    animation-name: slide;
+    /*tiempo de duracion*/
+    animation-duration: 20s;
+     /*cuanta veces quiero que se repita*/
+     animation-iteration-count: infinite;
+     /*forma que se ve el cambio*/
+     -o-animation-timing-function: ease-in-out;
+}
+   /*vamos a poner a funcionar la animacion*/
+   /*inicio 0% mitad 50% final 100%
+   from -> to */
+   @keyframes identifier {
+    
+   }
+.contenedor-slider img{
+    width: 1000px;
+    height: 500px;
+ 
+    object-fit: cover;
+
+}
+      /*MAIN*/
+         /*FOOTER*/
+
+      
+footer{
+ 
+    height: 150px;
+    width: 100%;
+    background-color: var(--colorEnfasis);
+    display: grid;
+    /* centra x y */
+    place-content: center;
+    color: var(--colorLetra);
+}
