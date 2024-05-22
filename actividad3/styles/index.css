@@ -23,13 +23,15 @@
 body{
     background-color:var(--colorClaro);
     font-family: var(--textTitle);
-    overflow:-x hidden;
+    font-size: 25px;
+    overflow:-x hidden;  
+    
+    
 
 }
    /*HEADER*/
 
    header {
-   border: 15px red;
    width: 100vw;
     height: auto;
    
@@ -43,35 +45,44 @@ body{
     display: grid;
     place-content: center;
     color: var(--colorFondo);
+    transition: all 500ms ease-in-out;
+    display: flex;
+    justify-content: center;
+}
+.titulo:active{
+    background-color: aqua;
+    color: bisque;
+    transform: scale(1,2);
+    
 }
 .contenedor-slider{
-    border:solid 5px rgb(61, 50, 50);
-    width: 1000px;
-    height: 500px;
+    border: solid 5px var(--colorEnfasis);
+    width: 75%;
+    height: 65vh;
     margin:100px auto;
-    overflow-x: scroll ;
+    overflow-x: hidden ;
     
 }
 
 .slider{
 
-    width: 1000px;
-    height: 500px;
+    width: 100%;
+    height: 100%;
     display: flex;
     /*nombre que se conecta con el keyframe*/
-    animation-name: rotar;
+    animation-name: deslizar;
     /*tiempo de duracion*/
-    animation-duration: 20s;
+    animation-duration: 10s;
      /*cuanta veces quiero que se repita*/
      animation-iteration-count: infinite;
      /*forma que se ve el cambio*/
-     animation-timing-function: linear ;
+     animation-timing-function: ease-in-out;
      animation-direction: alternate;
 }
    /*vamos a poner a funcionar la animacion*/
    /*inicio 0% mitad 50% final 100%
    from -> to */
-   @keyframes rotar {
+   @keyframes deslizar {
     from{
         transform: translateX(0%);
     }
@@ -83,24 +94,99 @@ body{
     }
     
    }
+   /* @keyframes rotar {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-360deg);
+    }
+} */
+
+/* @keyframes escala {
+    
+    from{
+        transform: scale(0.4);
+    }
+    50%{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.7);
+    }
+} */
+
 .contenedor-slider img{
-    width: 1000px;
-    height: 500px;
- 
-    object-fit: cover;
-
+    width: 100%;
+    height: 100%;
+  
 }
-      /*MAIN*/
-         /*FOOTER*/
 
+      /*MAIN*/
+main{
+    display: flex;
+    justify-content: center;
+}
+      .contenido{
+        border: solid 5px var(--colorFondo);
+        width: 75%;
+        height: auto;
+        margin-bottom: 100px;
+        
+      }
+      .tituloSecundario{
+        text-align: center;
+        padding: 25px;
+        
+      }
+
+      .imgParrafo{
+        
+        display: flex;
+        gap: 45px;
+        align-items: center;
+        padding: 15px;
+      }
+         /*FOOTER*/
+         .imgParrafo img{
+            width: 50%;
+        }
+        
+        .imgParrafo p{
+            width: 50%;
+        }
       
 footer{
  
-    height: 150px;
+    height: 100%;
     width: 100%;
     background-color: var(--colorEnfasis);
     display: grid;
     /* centra x y */
     place-content: center;
     color: var(--colorLetra);
+}
+
+@media screen and (max-width:490px){
+    /* body{
+        background-color: blue;
+    } */
+    .titulo{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .imgParrafo{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imgParrafo img{
+        width: 100%;
+    }
+    
+    .imgParrafo p{
+        width: 100%;
+    }
+    
 }
